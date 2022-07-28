@@ -83,6 +83,24 @@ function displayvalue(){
 
 
 }
+let statuss = 'off'
+function off(event){
+    if (statuss == 'off') {
+        upperdis.style.visibility = 'visible' 
+        lowerdis.style.visibility = 'visible' 
+        lowerdis.innerHTML = ''
+        lowerdis.innerHTML = '0'
+        event.target.innerHTML = 'OFF'
+        statuss = 'on'
+    }
+    else{
+        upperdis.style.visibility = 'hidden' 
+        lowerdis.style.visibility = 'hidden' 
+        lowerdis.innerHTML = ''
+        event.target.innerHTML = 'ON'
+        statuss = 'off'
+    }
+}
 
 function myclear() {
     upperdis.innerHTML = ''
@@ -97,3 +115,4 @@ function mywelco() {
     let wellc = 'How can i help u 🙄?'
     lowerdis.innerHTML = wellc
 }
+
